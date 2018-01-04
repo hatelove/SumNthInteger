@@ -11,10 +11,21 @@ namespace SumNthInteger
             var numbers = new[] { 4 };
             var n = 3;
             var maxVal = 20;
-            var expected = "4";
+            ResultShouldBe(numbers, n, maxVal, "4");
+        }
 
-            string actual = new Kata(numbers).SumNthInteger(n, maxVal);
-            Assert.AreEqual(expected, actual);
+        [TestMethod]
+        public void N_larger_than_numbers_length_And_N_larger_than_0_sum_larger_than_maxval()
+        {
+            var numbers = new[] { 40 };
+            var n = 3;
+            var maxVal = 20;
+            ResultShouldBe(numbers, n, maxVal, "input invalid");
+        }
+
+        private static void ResultShouldBe(int[] numbers, int n, int maxVal, string expected)
+        {
+            Assert.AreEqual(expected, new Kata(numbers).SumNthInteger(n, maxVal));
         }
     }
 }
