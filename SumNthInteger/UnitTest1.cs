@@ -69,12 +69,21 @@ namespace SumNthInteger
         }
 
         [TestMethod]
-        public void numbers_exist_negative_number_and_maxval_is_negative()
+        public void sum_and_maxval_both_negative()
         {
             var numbers = new[] { 4, -7, 5 };
             var n = 2;
             var maxVal = -20;
             ResultShouldBe(numbers, n, maxVal, "input invalid");
+        }
+
+        [TestMethod]
+        public void sum_and_maxval_both_negative_and_sum_smaller_than_maxval()
+        {
+            var numbers = new[] { 4, -7, 5 };
+            var n = 2;
+            var maxVal = -2;
+            ResultShouldBe(numbers, n, maxVal, "-3");
         }
 
         private static void ResultShouldBe(int[] numbers, int n, int maxVal, string expected)
