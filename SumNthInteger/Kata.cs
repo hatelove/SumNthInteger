@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace SumNthInteger
 {
@@ -13,7 +14,8 @@ namespace SumNthInteger
 
         public string SumNthInteger(int n, int maxVal)
         {
-            var sum = numbers.Take(n).Sum();
+            var count = Math.Abs(n);
+            var sum = numbers.Take(count).Sum();
             if (sum >= maxVal)
             {
                 return "input invalid";
