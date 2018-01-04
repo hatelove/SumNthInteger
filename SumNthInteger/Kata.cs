@@ -14,6 +14,10 @@ namespace SumNthInteger
         public string SumNthInteger(int n, int maxVal)
         {
             var sum = numbers.Sum();
+            if (sum >= maxVal)
+            {
+                return "input invalid";
+            }
             return sum.ToString();
         }
     }
