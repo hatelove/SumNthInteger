@@ -68,6 +68,15 @@ namespace SumNthInteger
             ResultShouldBe(numbers, n, maxVal, "-3");
         }
 
+        [TestMethod]
+        public void numbers_exist_negative_number_and_maxval_is_negative()
+        {
+            var numbers = new[] { 4, -7, 5 };
+            var n = 2;
+            var maxVal = -20;
+            ResultShouldBe(numbers, n, maxVal, "input invalid");
+        }
+
         private static void ResultShouldBe(int[] numbers, int n, int maxVal, string expected)
         {
             Assert.AreEqual(expected, new Kata(numbers).SumNthInteger(n, maxVal));
