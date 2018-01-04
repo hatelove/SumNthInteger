@@ -23,6 +23,15 @@ namespace SumNthInteger
             ResultShouldBe(numbers, n, maxVal, "input invalid");
         }
 
+        [TestMethod]
+        public void N_larger_than_numbers_length_And_N_larger_than_0_sum_equal_to_maxval()
+        {
+            var numbers = new[] { 20 };
+            var n = 3;
+            var maxVal = 20;
+            ResultShouldBe(numbers, n, maxVal, "input invalid");
+        }
+
         private static void ResultShouldBe(int[] numbers, int n, int maxVal, string expected)
         {
             Assert.AreEqual(expected, new Kata(numbers).SumNthInteger(n, maxVal));
