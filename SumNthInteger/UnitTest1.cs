@@ -37,6 +37,14 @@ namespace SumNthInteger
             ResultShouldBe(n, maxVal, "input invalid");
         }
 
+        [TestMethod]
+        public void n_is_negative()
+        {
+            var n = -3;
+            var maxVal = 10;
+            ResultShouldBe(n, maxVal, "6");
+        }
+
         private void ResultShouldBe(int n, int maxVal, string expected)
         {
             Assert.AreEqual(expected, new Kata().SumNthInteger(n, maxVal));
