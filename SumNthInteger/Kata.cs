@@ -13,7 +13,7 @@ namespace SumNthInteger
 
         public string SumNthInteger(int n, int maxVal)
         {
-            var sum = numbers.Sum();
+            var sum = numbers.Take(n).Sum();
             if (sum >= maxVal)
             {
                 return "input invalid";
