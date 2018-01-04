@@ -1,4 +1,6 @@
-﻿namespace SumNthInteger
+﻿using System.Linq;
+
+namespace SumNthInteger
 {
     internal class Kata
     {
@@ -11,7 +13,8 @@
 
         public string SumNthInteger(int n, int maxVal)
         {
-            throw new System.NotImplementedException();
+            var sum = numbers.Sum();
+            return sum.ToString();
         }
     }
 }
