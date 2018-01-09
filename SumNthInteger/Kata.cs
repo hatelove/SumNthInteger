@@ -12,11 +12,12 @@ namespace SumNthInteger
         {
             try
             {
-                if (GetSum(n) >= maxVal)
+                var sum = GetSum(n);
+                if (sum >= maxVal)
                 {
                     return "input invalid";
                 }
-                return GetSum(n).ToString();
+                return sum.ToString();
             }
             catch (OverflowException e)
             {
