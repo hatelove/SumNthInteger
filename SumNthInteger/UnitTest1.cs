@@ -45,6 +45,14 @@ namespace SumNthInteger
             ResultShouldBe(n, maxVal, "6");
         }
 
+        [TestMethod]
+        public void n_is_huge_number_make_overflow()
+        {
+            var n = 200000000;
+            var maxVal = 2000000000;
+            ResultShouldBe(n, maxVal, "input invalid");
+        }
+
         private void ResultShouldBe(int n, int maxVal, string expected)
         {
             Assert.AreEqual(expected, new Kata().SumNthInteger(n, maxVal));
